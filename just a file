@@ -1,0 +1,10 @@
+okay so this is just a file
+let's assume these are the changes
+get rid of the terminal
+make changes to the file
+save it
+that's git automatically checking the changes
+so if i added another file for example
+keeps checking keeps adding
+now these are not staged changes
+so committing won't work
