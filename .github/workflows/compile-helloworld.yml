@@ -18,7 +18,7 @@ jobs:
       - name: compile `helloworld.c` → `helloworld*`
         run: |
             { gcc -o ${{ github.workspace }}/helloworld  ${{ github.workspace }}/helloworld.c; } && \
-            ${{ github.workspace}}/helloworld -o "helloworld has been compiled" -r
+            ${{ github.workspace}}/helloworld
       # TODO:
       # - tag and release new binary
       - name: List files in the repository
