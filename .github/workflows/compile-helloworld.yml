@@ -15,8 +15,10 @@ jobs:
         run: |
           { sudo apt update && sudo apt install gcc --no-install-recommends -y; } >/dev/null 2>&1 && \
           echo "🌸 installation of gcc complete"
+      - name: compile `helloworld.c` → `helloworld*`
+        run: |
+            { gcc -o helloworld helloworld.c; } && ./helloworld -o "hello world has been compiled" -r
       # TODO:
-      # - compile `helloworld.c` → `helloworld*`
       # - tag and release new binary
       - name: List files in the repository
         run: |
