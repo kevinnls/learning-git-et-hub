@@ -17,7 +17,8 @@ jobs:
           echo "🌸 installation of gcc complete"
       - name: compile `helloworld.c` → `helloworld*`
         run: |
-            { gcc -o helloworld helloworld.c; } && ./helloworld -o "hello world has been compiled" -r
+            { gcc -o ${{ github.workspace }}/helloworld  ${{ github.workspace }}/helloworld.c; } && \
+            ${{ github.workspace}}/helloworld -o "helloworld has been compiled" -r
       # TODO:
       # - tag and release new binary
       - name: List files in the repository
